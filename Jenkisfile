@@ -6,7 +6,10 @@ node() {
             checkout scm
         }
         stage("Dependencies") {
-            sh("npm install")
+            nodejs('node') {
+                sh("npm install")
+            }
+            
         }
         stage("Test") {
             sh("npm run ci:test")
