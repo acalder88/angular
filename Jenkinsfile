@@ -12,10 +12,14 @@ node() {
             }
         }
         stage("Test") {
-            sh("npm run ci:test")
+            nodejs(nodeJSInstallationName: 'node') {
+                sh("npm run ci:test")
+            }
         }
         stage("Build") {
-            sh("npm build")
+            nodejs(nodeJSInstallationName: 'node') {
+                sh("npm build")
+            }
         }
     } catch(error) {
         throw error
