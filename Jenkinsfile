@@ -7,10 +7,7 @@ node() {
         }
         echo 'pepe'
         stage("Dependencies") {
-            nodejs(nodeJSInstallationName: 'node') {
-                sh("npm set progress=false")
-                sh('npm install')
-            }
+            sh('npm install')
         }
         stage("Test") {
             nodejs(nodeJSInstallationName: 'node') {
