@@ -5,6 +5,7 @@ node() {
         stage("Setup"){
             checkout scm
         }
+        echo 'pepe'
         stage("Dependencies") {
             nodejs(nodeJSInstallationName: 'node') {
                 sh 'npm install'
