@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ci:test": "sleep 10 && echo ======Test SUCCESS(10/10)=========="
+    "ci:test": "ng lint"
   },
   "private": true,
   "dependencies": {
